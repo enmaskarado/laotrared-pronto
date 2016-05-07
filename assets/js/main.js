@@ -105,17 +105,17 @@
 		(function() {
 
 			countdown.setLabels(
-				' milisegundo| segundo.| minuto| hora| día| semana| mes| año| década| siglo| milenio',
-				' milissegundos| segundos.| minutos| horas| días| semanas| meses| años| décadas| séculos| milenios',
+				' milisegundo| segundo| minuto| hora| día| semana| mes| año| década| siglo| milenio',
+				' milissegundos| segundos| minutos| horas| días| semanas| meses| años| décadas| séculos| milenios',
 				' y ',
 				', ',
 				'Ya es hora!');
 
-			document.getElementById("clk").innerHTML = countdown(null, new Date('2016', '4', '17', '12', '00')).toString();
+			document.getElementById("clk").innerHTML = "Faltan " + countdown(null, new Date('2016', '4', '17', '12', '00')).toString() + ".";
 
 			var timeinterval = setInterval(function(){
 					var tiempo = countdown(null, new Date('2016', '4', '17', '12', '00'));
-					document.getElementById("clk").innerHTML = tiempo.toString();
+					document.getElementById("clk").innerHTML = "Faltan " + tiempo.toString() + ".";
 				},1000);
 
 		})();
